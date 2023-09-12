@@ -16,9 +16,10 @@
 --fw-700: 700;
 
 --space-element: 1.6rem;
---space-btn: 5rem;
+--space-btn: 6rem;
 --space-paragraph: 0 3rem 0 0;
 --padding-card: 2.8125rem;
+--padding-btn: .6rem 1.5rem;
 
 }
 
@@ -32,7 +33,6 @@
     text-decoration: none;
   }
   html, body {
-    height: 100%;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
@@ -49,19 +49,14 @@
 
   body {
     background-color: var(--clr-background-headings-buttons);
+  }
+
+  .container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 57.5rem;
-    height: 31.25;
     border-radius: .625rem;
-    overflow: hidden;
   }
 
   .space-element {
@@ -71,16 +66,22 @@
   .container .sedan {
     background-color: var(--clr-bright);
     padding: var(--padding-card);
+    max-width: 300px;
+    max-height: 498px;
   }
 
   .container .suv {
     background-color: var(--clr-dark-cyan);
     padding: var(--padding-card);
+    max-width: 300px;
+    max-height: 498px;
   }
 
   .container .luxury {
     background-color: var(--clr-very-dark-cyan);
     padding: var(--padding-card);
+    max-width: 300px;
+    max-height: 498px;
   }
 
   .container h1 {
@@ -104,23 +105,62 @@
   .container button {
     background-color: var(--clr-background-headings-buttons);
     border-radius: 1.3rem;
-    padding: .5rem 2.5rem;
+    padding: var(--padding-btn);
     margin-top: var(--space-btn);
     border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }
 
+  .container button:hover {
+    border: 2px solid var(--clr-background-headings-buttons);
+    background-color: transparent;
   }
 
   .container .sedan button {
     color: var(--clr-bright);
+    font-weight: var(--fw-700);
+  }
+
+  .container .sedan button:hover {
+    color: var(--clr-background-headings-buttons);
+    font-weight: var(--fw-700);
   }
 
   .container .suv button {
     color: var(--clr-dark-cyan);
+    font-weight: var(--fw-700);
+  }
+
+  .container .suv button:hover {
+    color: var(--clr-background-headings-buttons);
+    font-weight: var(--fw-700);
   }
 
   .container .luxury button {
     color: var(--clr-very-dark-cyan);
+    font-weight: var(--fw-700);
   }
+
+  .container .luxury button:hover {
+    color: var(--clr-background-headings-buttons);
+    font-weight: var(--fw-700);
+  }
+
+  @media(max-width: 450px) {
+    .container {
+        height: auto;
+        margin: 6rem 1rem;
+        flex-direction: column;        
+      }
+  }
+  
+  
+  
+  
+  
+   
+
 
 
 
