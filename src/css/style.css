@@ -1,0 +1,127 @@
+:root {
+--clr-bright: hsl(31, 77%, 52%);
+--clr-dark-cyan: hsl(184, 100%, 22%);
+--clr-very-dark-cyan: hsl(179, 100%, 13%);
+--clr-paragraphs: hsla(0, 0%, 100%, 0.75);
+--clr-background-headings-buttons: hsl(0, 0%, 95%);
+
+--ff-default: 'Lexend Deca', sans-serif;
+--ff-title: 'Big Shoulders Display', cursive;
+
+--fs-0: .75rem;
+--fs-1: .9375rem;
+--fs-2: 2.125rem;
+
+--fw-400: 400;
+--fw-700: 700;
+
+--space-element: 1.6rem;
+--space-btn: 5rem;
+--space-paragraph: 0 3rem 0 0;
+--padding-card: 2.8125rem;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  html, body {
+    height: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+    img, svg {
+    display: block;
+    max-width: 100%;
+  }
+   button {
+    font: inherit;
+  }
+  p, h1 {
+    overflow-wrap: break-word;
+  }
+
+  body {
+    background-color: var(--clr-background-headings-buttons);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 57.5rem;
+    height: 31.25;
+    border-radius: .625rem;
+    overflow: hidden;
+  }
+
+  .space-element {
+    margin-top: var(--space-element);
+  } 
+
+  .container .sedan {
+    background-color: var(--clr-bright);
+    padding: var(--padding-card);
+  }
+
+  .container .suv {
+    background-color: var(--clr-dark-cyan);
+    padding: var(--padding-card);
+  }
+
+  .container .luxury {
+    background-color: var(--clr-very-dark-cyan);
+    padding: var(--padding-card);
+  }
+
+  .container h1 {
+    font-family: var(--ff-title);
+    font-weight: var(--fw-700);
+    font-size: var(--fs-2);
+    color: var(--clr-background-headings-buttons);
+    text-transform: uppercase;
+  }
+
+  .container p {
+    font-family: var(--ff-default);
+    font-weight: var(--fw-400);
+    color: var(--clr-paragraphs);
+    font-size: var(--fs-0);
+    padding: var(--space-paragraph);
+    line-height: 1.4rem;
+
+  }
+
+  .container button {
+    background-color: var(--clr-background-headings-buttons);
+    border-radius: 1.3rem;
+    padding: .5rem 2.5rem;
+    margin-top: var(--space-btn);
+    border: none;
+
+  }
+
+  .container .sedan button {
+    color: var(--clr-bright);
+  }
+
+  .container .suv button {
+    color: var(--clr-dark-cyan);
+  }
+
+  .container .luxury button {
+    color: var(--clr-very-dark-cyan);
+  }
+
+
+
+
