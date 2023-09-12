@@ -15,6 +15,11 @@
 --fw-400: 400;
 --fw-700: 700;
 
+--br-desktop-left: 1rem 0 0 1rem;
+--br-desktop-rigth: 0 1rem 1rem 0;
+--br-mobile-up: 1rem 1rem 0 0;
+--br-molbile-down: 0 0 1rem 1rem;
+
 --space-element: 1.6rem;
 --space-btn: 6rem;
 --space-paragraph: 0 3rem 0 0;
@@ -66,6 +71,7 @@
   .container .sedan {
     background-color: var(--clr-bright);
     padding: var(--padding-card);
+    border-radius: var(--br-desktop-left);
     max-width: 300px;
     max-height: 498px;
   }
@@ -80,6 +86,7 @@
   .container .luxury {
     background-color: var(--clr-very-dark-cyan);
     padding: var(--padding-card);
+    border-radius: var(--br-desktop-rigth);
     max-width: 300px;
     max-height: 498px;
   }
@@ -152,6 +159,14 @@
         height: auto;
         margin: 6rem 1rem;
         flex-direction: column;        
+      }
+
+      .container .sedan {
+        border-radius: var(--br-mobile-up);
+      }
+
+      .container .luxury {
+        border-radius: var(--br-molbile-down);
       }
   }
   
