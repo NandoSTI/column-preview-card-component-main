@@ -23,8 +23,12 @@
 --space-element: 1.6rem;
 --space-btn: 6rem;
 --space-paragraph: 0 3rem 0 0;
+
 --padding-card: 2.8125rem;
 --padding-btn: .6rem 1.5rem;
+
+--margin-mobile: 6rem 1rem;
+
 
 }
 
@@ -154,19 +158,53 @@
     font-weight: var(--fw-700);
   }
 
+  @media(max-width: 950px) {
+    .container {
+        height: auto;
+        margin: var(--margin-mobile);
+        flex-direction: column;     
+      }
+
+      .container .sedan {
+        border-radius: var(--br-mobile-up);
+        max-width: 420px;
+        max-height: 498px;
+      }
+
+       .container .suv {
+        max-width: 420px;
+        max-height: 498px;
+      }
+
+      .container .luxury {
+        border-radius: var(--br-molbile-down);
+        max-width: 420px;
+        max-height: 498px;
+      }
+  }
+
   @media(max-width: 450px) {
     .container {
         height: auto;
-        margin: 6rem 1rem;
+        margin: var(--margin-mobile);
         flex-direction: column;        
       }
 
       .container .sedan {
         border-radius: var(--br-mobile-up);
+        max-width: 300px;
+        max-height: 498px;
+      }
+
+      .container .suv {
+        max-width: 300px;
+        max-height: 498px;
       }
 
       .container .luxury {
         border-radius: var(--br-molbile-down);
+        max-width: 300px;
+        max-height: 498px;
       }
   }
   
